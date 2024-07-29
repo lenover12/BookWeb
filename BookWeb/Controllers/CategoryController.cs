@@ -27,6 +27,10 @@ namespace BookWeb.Controllers
         [HttpPost]
         public IActionResult Create(Category obj)
         {
+            if (!string.IsNullOrEmpty(obj.Name) && obj.Name.ToLower() == "leo")
+            {
+                ModelState.AddModelError("Name", "Leo cannot be a book...");
+            }
             if (ModelState.IsValid)
             {
                 _db.Categories.Add(obj);
