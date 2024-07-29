@@ -15,4 +15,16 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Category\Create.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Category\Create.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Category\Create.cshtml" />
+  </ItemGroup>
+
 </Project>
